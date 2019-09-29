@@ -1,5 +1,6 @@
-= form_with model: @item do |f|
-  = f.text_field :name
-  = f.text_field :image
-  = f.text_area :detail
-  = f.submit "投稿"
+.form
+  = form_with model: @item do |f|
+    = f.text_field :name
+    = f.text_field :image
+    = f.text_area :detail
+    = f.submit "投稿"
