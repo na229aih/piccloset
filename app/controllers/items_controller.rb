@@ -11,13 +11,13 @@ class ItemsController < ApplicationController
   end
 
   def create
-    Item.create(item_params)
+    Item.create(image: item_params[:image], detail: item_params[:detail], user_id: current_user.id)
     redirect_to "/"
   end
 
   private
   def item_params
-    params.require(:item).permit(:name, :image, :detail)
+    params.require(:item).permit(:image, :detail)
   end
 
   def move_to_root
