@@ -1,4 +1,6 @@
 .main
 - @items.each do |item|
   .main__item
-    = image_tag item.image, size: "250x250"
+    = image_tag item.image.url
+    .main__user
+    = 
