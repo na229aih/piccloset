@@ -1,6 +1,19 @@
+.title
+  = fa_icon "pencil-square-o"
+  最近の投稿
+
 .main
-- @items.each do |item|
-  .main__item
-    = image_tag item.image.url
-    .main__user
-    = 
+  - @items.each do |item|
+    .main__item
+      = image_tag item.image.url
+
+      .main__item__user
+        = item.user.nickname
+
+      .main__item__comment
+        = fa_icon "comment-o"
+        0
+
+      .main__item__heart
+        = fa_icon "heart-o"
+        0

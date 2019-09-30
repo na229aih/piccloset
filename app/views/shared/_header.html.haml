@@ -1,7 +1,9 @@
 .header
   .header__title
-    = link_to "ItemClip", "/"
-
+    = link_to "/" do
+      = fa_icon "camera"
+      ItemClip
+    
   - if user_signed_in?
     .header__button
       = link_to "投稿する", "/items/new"
