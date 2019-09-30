@@ -5,6 +5,8 @@
       ItemClip
     
   - if user_signed_in?
+    .header__user
+      = link_to current_user.nickname, "/users/#{current_user.id}"
     .header__button
       = link_to "投稿する", "/items/new"
     .header__button
