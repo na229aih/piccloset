@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
 
-  before_action :move_to_root, except: :index
+  before_action :move_to_root, except: [:index, :show]
 
   def index
-    @items = Item.all.order("id DESC")
+    @items = Item.includes(:user).order("id DESC")
   end
 
   def new
@@ -13,6 +13,10 @@ class ItemsController < ApplicationController
   def create
     Item.create(image: item_params[:image], detail: item_params[:detail], user_id: current_user.id)
     redirect_to "/"
+  end
+
+  def show
+    @item = Item.find(params[:id])
   end
 
   private

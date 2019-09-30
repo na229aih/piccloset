@@ -1,7 +1,8 @@
 .main
   - @items.each do |item|
     .main__item
-      = image_tag item.image.url
+      = link_to "/items/#{item.id}" do
+        = image_tag item.image.url
 
       .main__item__user
         = item.user.nickname

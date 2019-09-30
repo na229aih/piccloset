@@ -1,0 +1,21 @@
+.detail-image
+  = image_tag @item.image.url
+
+
+.detail-box
+  .detail-box__comment
+    = fa_icon "comment-o"
+    0
+
+  .detail-box__heart
+    = fa_icon "heart-o"
+    0
+
+  .detail-box__user
+    = @item.user.nickname
+
+  .detail-box__time
+    = @item.created_at.strftime("%Y/%m/%d %H:%M")
+  
+  .detail-box__text
+    = @item.detail

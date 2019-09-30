@@ -1,0 +1,48 @@
+.detail-image{
+  padding: 80px 40px 8px;
+  width: 40vw;
+  margin: 0 auto;
+
+  img{
+    height: auto;
+    width: 40vw;
+    border-radius: 6px;
+  }
+}
+
+.detail-box{
+  width: 50vw;
+  margin: 0 auto;
+  border: solid 1px #eeeeee;
+  border-radius: 6px;
+
+  &__comment{
+    float: right;
+    padding-right: 6px;
+  }
+
+  &__heart{
+    float: right;
+    padding-right: 6px;
+  }
+
+  &__user{
+    float: left;
+    padding-left: 6px;
+  }
+
+  &__time{
+    float: left;
+    padding-left: 6px;
+    padding-top: 4px;
+    font-size: 12px;
+    color: #999999;
+  }
+
+  &__text{
+    width: 45vw;
+    clear: both;
+    word-wrap: break-word;
+    padding-top: 5px;
+  }
+}
