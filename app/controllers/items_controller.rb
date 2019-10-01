@@ -21,6 +21,14 @@ class ItemsController < ApplicationController
     @comments = @item.comments.includes(:user)
   end
 
+  def iine(user)
+    likes.create(user_id: user.id)
+  end
+
+  def uniine(user)
+    likes.find_by(user_id: user.id).destroy
+  end
+
   private
   def item_params
     params.require(:item).permit(:image, :detail)
