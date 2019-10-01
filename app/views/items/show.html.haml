@@ -22,3 +22,8 @@
   
   .detail-box__text
     = @item.detail
+
+.comment-form
+  = form_with model: [@item, @comment] do |f|
+    = f.text_area :text
+    = f.submit "コメントする"
