@@ -19,25 +19,44 @@
     box-shadow: 2px 2px 4px #eeeeee;
     border-radius: 6px;
 
-    img{
+    &--image{
       height: auto;
       width: 22vw;
       border-radius: 6px;
     }
 
+    &__profile{
+      float: left;
+
+      &--image{
+        width: 35px;
+        height: 35px;
+        border-radius: 25px;
+        border: solid 1px #eeeeee;
+      }
+    }
+
     &__user{
       float: left;
-      padding-left: 6px;
+      padding-left: 4px;
+      padding-top: 6px;
+
+      a{
+        text-decoration: none;
+        color: #535555;
+      }
     }
 
     &__heart{
       float: right;
       padding-right: 6px;
+      padding-top: 6px;
     }
 
     &__comment{
       float: right;
       padding-right: 6px;
+      padding-top: 6px;
     }
   }
 }

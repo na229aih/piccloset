@@ -2,10 +2,14 @@
   - @items.each do |item|
     .main__item
       = link_to "/items/#{item.id}" do
-        = image_tag item.image.url
+        = image_tag item.image.url, class: "main__item--image"
+
+      .main__item__profile
+        = link_to "/users/#{item.user.id}" do
+          = image_tag item.user.profile.url, class: "main__item__profile--image"
 
       .main__item__user
-        = item.user.nickname
+        = link_to item.user.nickname, "/users/#{item.user.id}"
 
       .main__item__comment
         = fa_icon "comment-o"
