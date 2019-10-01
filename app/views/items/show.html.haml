@@ -1,7 +1,6 @@
 .detail-image
   = image_tag @item.image.url
 
-
 .detail-box
   .detail-box__comment
     = fa_icon "comment-o"
@@ -11,8 +10,12 @@
     = fa_icon "heart-o"
     0
 
+  .detail-box__profile
+    = link_to "/users/#{@item.user.id}" do
+      = image_tag @item.user.profile.url, class: "detail-box__profile--image"
+
   .detail-box__user
-    = @item.user.nickname
+    = link_to @item.user.nickname, "/users/#{@item.user.id}"
 
   .detail-box__time
     = @item.created_at.strftime("%Y/%m/%d %H:%M")
