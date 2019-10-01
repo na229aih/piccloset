@@ -4,7 +4,7 @@
 .detail-box
   .detail-box__comment
     = fa_icon "comment-o"
-    0
+    = @comments.length
 
   .detail-box__heart
     = fa_icon "heart-o"
@@ -22,6 +22,25 @@
   
   .detail-box__text
     = @item.detail
+
+.comment-top
+  コメント一覧
+
+.comment
+  - @comments.each do |comment|
+    .comment__box
+      .comment__box__profile
+        = link_to "/users/#{comment.user.id}" do
+          = image_tag comment.user.profile.url, class: "comment__box__profile--image"
+
+      .comment__box__user
+        = link_to comment.user.nickname, "/users/#{comment.user.id}"
+
+      .comment__box__time
+        = comment.created_at.strftime("%Y/%m/%d %H:%M")
+      
+      .comment__box__text
+        = comment.text
 
 .comment-form
   = form_with model: [@item, @comment] do |f|

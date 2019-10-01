@@ -15,6 +15,7 @@
   margin: 0 auto;
   border: solid 1px #eeeeee;
   border-radius: 6px;
+  margin-bottom: 25px;
 
   &__comment{
     float: right;
@@ -63,5 +64,67 @@
     clear: both;
     word-wrap: break-word;
     padding-top: 5px;
+  }
+}
+
+.comment-top{
+  width: 50vw;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.comment{
+  &__box{
+    width: 50vw;
+    margin: 0 auto;
+    border: solid 1px #eeeeee;
+    border-radius: 6px;
+    margin-bottom: 10px;
+
+    &__user{
+      float: left;
+      padding-left: 6px;
+      padding-top: 6px;
+
+      a{
+        text-decoration: none;
+        color: #535555;
+      }
+    }
+
+    &__profile{
+      float: left;
+      
+      &--image{
+        width: 35px;
+        height: 35px;
+        border-radius: 25px;
+        border: solid 1px #eeeeee;
+      }
+    }
+
+    &__time{
+      float: left;
+      padding-left: 6px;
+      padding-top: 7px;
+      font-size: 12px;
+      color: #999999;
+    }
+
+    &__text{
+      width: 45vw;
+      clear: both;
+      word-wrap: break-word;
+      padding-top: 5px;
+    }
+  }
+}
+
+.comment-form{
+  width: 50vw;
+  margin: 20px auto 40px;
+
+  #comment_text{
+    width: 50vw;
   }
 }
