@@ -1,6 +1,30 @@
-.title
+.user
+  .user__profile
+    = image_tag @user.profile.url
+
+  .user__box
+    .user__box__name
+      #{@user.nickname}
+    .user__box__data
+      .user__box__data__post
+        投稿
+        %br
+        #{@items.length}
+      .user__box__data__post
+        フォロワー
+        %br
+        0
+      .user__box__data__post
+        フォロー中
+        %br
+        0
+
+  .user__follow
+    = fa_icon "user-plus"
+
+.user-title
   = fa_icon "pencil-square-o"
-  #{@nickname}の投稿
+  #{@user.nickname}の投稿
 
 %div
   = render 'shared/items', items: @items

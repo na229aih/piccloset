@@ -10,7 +10,7 @@
   padding: 0 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   &__item{
     width: 22vw;
@@ -20,8 +20,9 @@
     border-radius: 6px;
 
     &--image{
-      height: auto;
+      height: 22vw;
       width: 22vw;
+      object-fit: cover;
       border-radius: 6px;
     }
 
