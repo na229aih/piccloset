@@ -7,8 +7,8 @@
     = @comments.length
 
   .detail-box__heart
-    = fa_icon "heart-o"
-    0
+    %div{class: "main__item__heart__#{@item.id}"}
+      = render 'shared/likes', item: @item
 
   .detail-box__profile
     = link_to "/users/#{@item.user.id}" do

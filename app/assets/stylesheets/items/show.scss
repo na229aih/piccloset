@@ -27,6 +27,16 @@
     float: right;
     padding-right: 6px;
     padding-top: 4px;
+
+    a{
+      text-decoration: none;
+    }
+    .heart-like{
+      color: #F86082;
+    }
+    .heart-unlike{
+      color: #535555;
+    }
   }
 
   &__user{
