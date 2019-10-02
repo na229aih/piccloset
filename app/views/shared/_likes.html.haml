@@ -1,0 +1,16 @@
+%div{class: "main__item__heart__#{item.id}__box"}
+
+- if user_signed_in?
+  - if current_user.likes.find_by(item_id: item.id)
+    = link_to "/like/#{item.id}", method: :delete, remote: true do
+      = fa_icon "heart", class: "heart-like"
+    = item.likes_count.present? ? item.likes_count : 0
+
+  - else
+    = link_to "/like/#{item.id}", method: :post, remote: true do
+      = fa_icon "heart-o", class: "heart-unlike"
+    = item.likes_count.present? ? item.likes_count : 0
+  
+- else
+  = fa_icon "heart-o", class: "heart-unlike"
+  = item.likes_count.present? ? item.likes_count : 0

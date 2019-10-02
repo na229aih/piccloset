@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :comments
   has_many :likes, dependent: :destroy
-  
+  has_many :like_items, through: :likes, source: :item
+
   mount_uploader :profile, ImageUploader
 end

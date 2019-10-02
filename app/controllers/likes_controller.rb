@@ -1,24 +1,23 @@
 class LikesController < ApplicationController
 
+  before_action :set_variables
+
   def create
-    @item = Item.find(params[:item_id])
-    unless @micropost.iine?(current_user)
-      @item.iine(current_user)
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    like = current_user.likes.new(item_id: @item.id)
+    like.save
+    @item.reload
   end
 
-  def destroy
-    @item = Like.find(params[:id]).item
-    @item.uniine(current_user)
-    if @item.iine?(current_user)
-      @item.uniine(current_user)
-      respond_to do |format|
-        format.html
-        format.js
-      end
+  def delete
+    like = current_user.likes.find_by(item_id: @item.id)
+    like.destroy
+    @item.reload
+  end
+
+  private
+
+  def set_variables
+    @item = Item.find(params[:item_id])
   end
   
 end

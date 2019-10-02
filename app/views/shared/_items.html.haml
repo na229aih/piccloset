@@ -16,11 +16,5 @@
         = item.comments.length
 
       .main__item__heart
-        - if item.iine?(current_user)
-          = form_for(item.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f|
-            = fa_icon "heart-o"
-            0
-        - else
-          = form_for(item.likes.build, remote: true) do |f|
-            = fa_icon "heart-o"
-            0
+        %div{class: "main__item__heart__#{item.id}"}
+          = render 'shared/likes', item: item

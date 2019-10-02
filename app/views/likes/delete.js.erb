@@ -1,0 +1,1 @@
+$(".main__item__heart__<%= @item.id %>").html('<%= escape_javascript(render("shared/likes", item: @item )) %>');
