@@ -1,0 +1,13 @@
+.follow-name__title
+  フォロワー
+
+- users.each do |user|
+
+  .follow-name__box
+
+    .follow-name__box__profile
+      = link_to "/users/#{user.id}" do
+        = image_tag user.profile.url
+
+    .follow-name__box__user
+      = link_to user.nickname, "/users/#{user.id}"

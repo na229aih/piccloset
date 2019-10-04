@@ -1,3 +1,4 @@
-フォロワー
-%br
-#{user.followers.length}
+= link_to "/users/#{@user.id}/followers", remote: true do
+  フォロワー
+  %br
+  #{user.followers.length}

@@ -30,6 +30,11 @@
       justify-content: space-between;
       text-align: center;
 
+      a{
+        text-decoration: none;
+        color: #535555;
+      }
+
       &__post{
         font-size: 16px;
         padding-bottom: 6px;
@@ -45,8 +50,53 @@
 
       .follows{
         width: 11vw;
-        border-radius: 5%;
+        border-radius: 4%;
+        font-size: 13px;
         padding: 12px;
+        color: #535555;
+      }
+    }
+  }
+}
+
+.follow-name{
+  margin-top: 40px;
+  padding: 0 40vw;
+  
+  &__title{
+    text-align: center;
+  }
+
+  &__box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+
+    &__profile{
+      width: 10vw;
+      padding-top: 1vh;
+      padding-left: 1vh;
+
+      img{
+        width: 8vw;
+        height: 8vw;
+        object-fit: cover;
+        border-radius: 100px;
+        border: solid 1px #eeeeee;
+      }
+      
+    }
+
+    &__user{
+      width: 9vw;
+      text-align: center;
+      padding-top: 5vh;
+      font-size: 18px;
+
+      a{
+        text-decoration: none;
         color: #535555;
       }
     }

@@ -21,7 +21,7 @@
     = @item.created_at.strftime("%Y/%m/%d %H:%M")
   
   .detail-box__text
-    = @item.detail
+    = simple_format(@item.detail)
 
 .comment-top
   コメント一覧
@@ -40,7 +40,7 @@
         = comment.created_at.strftime("%Y/%m/%d %H:%M")
       
       .comment__box__text
-        = comment.text
+        = simple_format(comment.text)
 
 - if user_signed_in?
   .comment-form

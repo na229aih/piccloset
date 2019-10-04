@@ -1,3 +1,19 @@
+.new-title{
+  padding-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+
 .form{
-  padding-top: 60px;
+  padding: 40px 30vw 0;
+
+  #item_image{
+    width: 100vw;
+    margin-bottom: 30px;
+  }
+
+  #item_detail{
+    width: 40vw;
+    height: 25vh;
+  }
 }

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   resources :users ,only: [:show]
 
+  get '/users/:id/followings' => 'users#followings'
+  get '/users/:id/followers' => 'users#followers'
+
   post '/like/:item_id' => 'likes#create'
   delete '/like/:item_id' => 'likes#destroy'
 

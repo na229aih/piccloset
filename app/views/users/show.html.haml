@@ -14,13 +14,15 @@
       .user__box__data__follower
         = render 'shared/followers', user: @user
 
-      .user__box__data__post
+      = link_to "/users/#{@user.id}/followings", class: ".user__box__data__post", remote: true do
         フォロー中
         %br
         #{@user.followings.length}
 
   .user__follow
     = render 'shared/follow', user: @user
+
+.follow-name
 
 .user-title
   = fa_icon "pencil-square-o"
