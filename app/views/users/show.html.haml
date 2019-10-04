@@ -3,7 +3,7 @@
     = image_tag @user.profile.url
 
   .user__box
-    .user__box__name
+    .user__box__name{data: {user_id: @user.id}}
       #{@user.nickname}
     .user__box__data
       .user__box__data__post
