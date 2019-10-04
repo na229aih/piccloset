@@ -1,0 +1,3 @@
+$(".user__follow").html('<%= escape_javascript(render("shared/follow", user: @user )) %>');
+
+$(".user__box__data__follower").html('<%= escape_javascript(render("shared/followers", user: @user )) %>');

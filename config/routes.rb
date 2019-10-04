@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :users ,only: [:show]
 
   post '/like/:item_id' => 'likes#create'
-  delete '/like/:item_id' => 'likes#delete'
+  delete '/like/:item_id' => 'likes#destroy'
+
+  resources :relationships, only: [:create, :destroy]
 
 end

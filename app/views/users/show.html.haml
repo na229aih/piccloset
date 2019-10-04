@@ -10,17 +10,17 @@
         投稿
         %br
         #{@items.length}
-      .user__box__data__post
-        フォロワー
-        %br
-        0
+      
+      .user__box__data__follower
+        = render 'shared/followers', user: @user
+
       .user__box__data__post
         フォロー中
         %br
-        0
+        #{@user.followings.length}
 
   .user__follow
-    = fa_icon "user-plus"
+    = render 'shared/follow', user: @user
 
 .user-title
   = fa_icon "pencil-square-o"
